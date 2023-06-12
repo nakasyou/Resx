@@ -1,7 +1,6 @@
 import { deepMerge } from "../deps.ts"
 
-type Func = ()=>void
-export type JavaScriptInput = Func | string
+export type JavascriptInput = (()=>void) | string
 
 const defaultResponseOption = {
   headers: {
