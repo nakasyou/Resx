@@ -26,7 +26,7 @@ const defaultResponseOption = {
  * const response: Response = resx.javascript(`alert("Hello!")`)
  * ```
  */
-export function html(input: JavaScriptInput, responseOption?): Response { 
+export function javascript(input: JavaScriptInput, responseOption?): Response { 
   const newResponseOption = deepMerge.deepMerge(defaultResponseOption, responseOption) // Merge response constructor option.
   
   let code: string
