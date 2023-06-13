@@ -26,7 +26,7 @@ const defaultResponseOption = {
  * const response: Response = resx.javascript(`alert("Hello!")`)
  * ```
  */
-export function html(input: JavaScriptInput, responseOption): Response { 
+export function html(input: JavaScriptInput, responseOption?): Response { 
   const newResponseOption = deepMerge.deepMerge(defaultResponseOption, responseOption) // Merge response constructor option.
   
   let code: string
@@ -37,5 +37,5 @@ export function html(input: JavaScriptInput, responseOption): Response {
     // Is function
     code = input.toString() + "()"
   }
-  return new Reponse(code, newResponseOption)
+  return new Response(code, newResponseOption)
 }
