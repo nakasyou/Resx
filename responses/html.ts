@@ -27,8 +27,8 @@ const defaultResponseOption = {
  * `)
  * ```
  */
-export function html(input: HtmlInput, responseOption): Response { 
+export function html(input: HtmlInput, responseOption?): Response { 
   const newResponseOption = deepMerge.deepMerge(defaultResponseOption, responseOption) // Merge response constructor option.
 
-  return new Reponse(input, newResponseOption)
+  return new Response(input, newResponseOption)
 }
