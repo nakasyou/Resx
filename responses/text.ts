@@ -17,8 +17,8 @@ const defaultResponseOption = {
  * const response: Response = resx.text("Hello World!!!")
  * ```
  */
-export function text(input: JsonInput, responseOption): Response { 
+export function text(input: JsonInput, responseOption?): Response { 
   const newResponseOption = deepMerge.deepMerge(defaultResponseOption, responseOption) // Merge response constructor option.
 
-  return new Reponse(input, newResponseOption)
+  return new Response(input, newResponseOption)
 }
