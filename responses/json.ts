@@ -11,10 +11,10 @@ const defaultResponseOption = {
 /**
  * Returns JSON response.
  */
-export function json(input: JsonInput, responseOption): Response {
+export function json(input: JsonInput, responseOption?): Response {
   const json = JSON.stringify(input)
   
   const newResponseOption = deepMerge.deepMerge(defaultResponseOption, responseOption) // Merge response constructor option.
 
-  return new Reponse(json, newResponseOption)
+  return new Response(json, newResponseOption)
 }
